@@ -1,22 +1,26 @@
 .nav {
   display: flex;
   padding: 15px 30px;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: 100%;
+  background-color: #f8f8fa;
+  box-shadow: rgba(161, 223, 167, 0.988) 0px 1px 4px;
+  width: auto;
+  position: relative;
+  z-index: 2;
 }
 .expand_btn {
   display: flex;
   padding: 2px 4px;
   width: 110px;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.64) 0px 1px 4px;
   justify-content: space-between;
   border: 1px solid #dfe1e4;
   border-radius: 5px;
   font-weight: 500;
   font-family: sans-serif;
   cursor: pointer;
+  position: relative;
+  z-index: 11;
 }
 
 .expand_btn svg {
@@ -24,14 +28,18 @@
   width: 20px;
 }
 .dropdown {
+  display: none;
   position: absolute;
   z-index: 2;
-  top: 50px;
+  top: 40px;
   left: 25px;
   background-color: #f8f8fa;
   border: 0.5px solid #dfe1e4;
   border-radius: 10px;
   width: 250px;
+}
+.dropdown.show {
+  display: block;
 }
 .display {
   display: flex;
